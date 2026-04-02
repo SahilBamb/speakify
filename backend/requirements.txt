@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pymupdf
+sqlalchemy
+piper-tts
+openai
+python-json-logger
+pytest
+httpx

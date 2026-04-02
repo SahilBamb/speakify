@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #e8eeff 0%, #f0eeff 30%, #f8f0ff 55%, #fff0f6 80%, #f0faf4 100%);
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.7);
+  --glass-strong-bg: rgba(255, 255, 255, 0.8);
+  --glass-strong-border: rgba(255, 255, 255, 0.85);
+  --glass-subtle-bg: rgba(255, 255, 255, 0.35);
+  --glass-subtle-border: rgba(255, 255, 255, 0.5);
+  --scrollbar-thumb: rgba(0, 0, 0, 0.12);
+  --scrollbar-thumb-hover: rgba(0, 0, 0, 0.2);
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --surface-hover: rgba(241, 245, 249, 0.5);
+  --input-bg: rgba(255, 255, 255, 0.6);
+  --input-border: rgba(203, 213, 225, 0.6);
+  --highlight-bg: rgba(224, 231, 255, 0.8);
+  --highlight-text: #312e81;
+  --highlight-ring: rgba(199, 210, 254, 0.6);
+}
+
+.dark {
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1a1033 30%, #1a0f2e 55%, #1c1015 80%, #0f1a14 100%);
+  --glass-bg: rgba(30, 41, 59, 0.6);
+  --glass-border: rgba(51, 65, 85, 0.5);
+  --glass-strong-bg: rgba(30, 41, 59, 0.85);
+  --glass-strong-border: rgba(51, 65, 85, 0.6);
+  --glass-subtle-bg: rgba(30, 41, 59, 0.4);
+  --glass-subtle-border: rgba(51, 65, 85, 0.35);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.15);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.25);
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --surface-hover: rgba(51, 65, 85, 0.5);
+  --input-bg: rgba(30, 41, 59, 0.6);
+  --input-border: rgba(51, 65, 85, 0.6);
+  --highlight-bg: rgba(99, 102, 241, 0.25);
+  --highlight-text: #c7d2fe;
+  --highlight-ring: rgba(99, 102, 241, 0.4);
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-strong {
+  background: var(--glass-strong-bg);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid var(--glass-strong-border);
+}
+
+.glass-subtle {
+  background: var(--glass-subtle-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-subtle-border);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.react-pdf__Page__canvas {
+  border-radius: 4px;
+}
+
+@utility text-theme-primary {
+  color: var(--text-primary);
+}
+
+@utility text-theme-secondary {
+  color: var(--text-secondary);
+}
+
+@utility text-theme-muted {
+  color: var(--text-muted);
+}
+
+@utility bg-theme-hover {
+  background-color: var(--surface-hover);
+}
+
+@utility bg-theme-input {
+  background-color: var(--input-bg);
+}
+
+@utility border-theme-input {
+  border-color: var(--input-border);
+}
+
+@utility bg-theme-highlight {
+  background-color: var(--highlight-bg);
+}
+
+@utility text-theme-highlight {
+  color: var(--highlight-text);
+}
+
+@utility ring-theme-highlight {
+  --tw-ring-color: var(--highlight-ring);
+}
