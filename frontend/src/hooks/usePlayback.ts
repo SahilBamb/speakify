@@ -33,7 +33,6 @@ export interface PlaybackChunk {
   sequence_order: number;
   estimated_duration_ms: number;
   text: string;
-  [key: string]: unknown;
 }
 
 export function usePlayback(

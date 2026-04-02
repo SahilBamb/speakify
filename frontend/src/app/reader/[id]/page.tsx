@@ -33,7 +33,7 @@ function ReaderPageInner() {
   const [chunks, setChunks] = useState<Chunk[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const saveTimerRef = useRef<ReturnType<typeof setInterval>>();
+  const saveTimerRef = useRef<ReturnType<typeof setInterval>>(undefined);
 
   const playback = usePlayback(chunks, docId);
   const { showHelp, setShowHelp } = useKeyboardShortcuts({ playback });

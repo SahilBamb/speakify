@@ -43,7 +43,7 @@ function BookReaderPageInner() {
   const [loading, setLoading] = useState(true);
   const [chapterLoading, setChapterLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const saveTimerRef = useRef<ReturnType<typeof setInterval>>();
+  const saveTimerRef = useRef<ReturnType<typeof setInterval>>(undefined);
   const initialLoadDone = useRef(false);
   const [prefsOpen, setPrefsOpen] = useState(false);
   const { prefs, setPrefs } = useReadingPrefs();
@@ -275,6 +275,7 @@ function BookReaderPageInner() {
               Next
             </button>
           </div>
+        </div>
       </header>
 
       {/* Content */}
