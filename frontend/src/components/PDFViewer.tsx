@@ -137,7 +137,7 @@ export default function PDFViewer({
             value={pageInput}
             onChange={(e) => setPageInput(e.target.value)}
             placeholder="Go to…"
-            className="w-16 px-2 py-1 rounded-lg text-xs bg-theme-input border border-theme-input text-theme-primary placeholder:text-theme-muted focus:outline-none focus:ring-1 focus:ring-indigo-300"
+            className="w-16 px-2 py-1 rounded-lg text-xs bg-theme-input border border-theme-input text-theme-primary placeholder:text-theme-muted focus:outline-none focus:ring-1 focus:ring-zinc-300"
           />
         </form>
       </div>
@@ -151,7 +151,7 @@ export default function PDFViewer({
             onLoadError={() => setLoadError(true)}
             loading={
               <div className="flex items-center justify-center py-32">
-                <div className="w-6 h-6 border-2 border-slate-300 border-t-indigo-400 rounded-full animate-spin" />
+                <div className="w-6 h-6 border-2 border-slate-300 border-t-zinc-400 rounded-full animate-spin" />
               </div>
             }
           >

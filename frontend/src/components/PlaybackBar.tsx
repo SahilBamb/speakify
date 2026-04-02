@@ -69,7 +69,7 @@ export default function PlaybackBar({ playback, chunks, documentTitle }: Playbac
       {/* Progress bar */}
       <div className="h-1 bg-slate-100/60 w-full">
         <div
-          className="h-full bg-gradient-to-r from-indigo-400 to-purple-400 transition-all duration-500 ease-out"
+          className="h-full bg-zinc-800 transition-all duration-500 ease-out"
           style={{ width: `${progressPct}%` }}
         />
       </div>
@@ -88,7 +88,7 @@ export default function PlaybackBar({ playback, chunks, documentTitle }: Playbac
             <select
               value={speed}
               onChange={(e) => setSpeed(parseFloat(e.target.value))}
-              className="text-xs font-medium bg-theme-input border border-theme-input rounded-lg px-2 py-1.5 text-theme-secondary focus:outline-none focus:ring-1 focus:ring-indigo-300 cursor-pointer"
+              className="text-xs font-medium bg-theme-input border border-theme-input rounded-lg px-2 py-1.5 text-theme-secondary focus:outline-none focus:ring-1 focus:ring-zinc-300 cursor-pointer"
             >
               {SPEEDS.map((s) => (
                 <option key={s} value={s}>
@@ -129,7 +129,7 @@ export default function PlaybackBar({ playback, chunks, documentTitle }: Playbac
             <button
               onClick={handlePlayPause}
               disabled={status === "idle"}
-              className="p-3 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 text-white shadow-md shadow-indigo-200/50 hover:shadow-lg hover:shadow-indigo-300/50 hover:scale-105 active:scale-95 transition-all disabled:opacity-40 disabled:hover:scale-100"
+              className="p-3 rounded-2xl bg-zinc-900 hover:bg-zinc-800 text-white shadow-md shadow-zinc-200/50 hover:shadow-lg hover:shadow-zinc-300/50 hover:scale-105 active:scale-95 transition-all disabled:opacity-40 disabled:hover:scale-100"
               title={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? (

@@ -45,7 +45,7 @@ export default function ReadingPrefsPanel({ prefs, onChange, open, onClose }: Re
               onClick={() => onChange({ fontFamily: f })}
               className={`flex-1 px-2 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 prefs.fontFamily === f
-                  ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300"
+                  ? "bg-zinc-100 text-zinc-700"
                   : "text-theme-muted hover:bg-theme-hover"
               }`}
               style={{ fontFamily: f === "sans" ? "sans-serif" : f === "serif" ? "Georgia, serif" : "monospace" }}
@@ -67,7 +67,7 @@ export default function ReadingPrefsPanel({ prefs, onChange, open, onClose }: Re
               onClick={() => onChange({ fontSize: s })}
               className={`flex-1 px-1 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 prefs.fontSize === s
-                  ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300"
+                  ? "bg-zinc-100 text-zinc-700"
                   : "text-theme-muted hover:bg-theme-hover"
               }`}
             >
@@ -88,7 +88,7 @@ export default function ReadingPrefsPanel({ prefs, onChange, open, onClose }: Re
               onClick={() => onChange({ lineHeight: lh })}
               className={`flex-1 px-1 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 prefs.lineHeight === lh
-                  ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300"
+                  ? "bg-zinc-100 text-zinc-700"
                   : "text-theme-muted hover:bg-theme-hover"
               }`}
             >

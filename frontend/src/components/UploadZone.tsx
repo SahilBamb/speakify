@@ -65,8 +65,8 @@ export default function UploadZone({ onUploadComplete }: UploadZoneProps) {
         glass rounded-2xl p-8 sm:p-12 text-center cursor-pointer
         transition-all duration-300 ease-out
         ${dragging
-          ? "shadow-lg shadow-indigo-200/50 scale-[1.01] border-indigo-300/60"
-          : "shadow-md shadow-black/[0.04] hover:shadow-lg hover:shadow-indigo-100/40 hover:scale-[1.005]"
+          ? "shadow-lg shadow-zinc-200/50 scale-[1.01] border-zinc-300/60"
+          : "shadow-md shadow-black/[0.04] hover:shadow-lg hover:shadow-zinc-100/40 hover:scale-[1.005]"
         }
       `}
     >
@@ -86,9 +86,9 @@ export default function UploadZone({ onUploadComplete }: UploadZoneProps) {
         <div className={`
           w-16 h-16 rounded-2xl flex items-center justify-center
           transition-colors duration-300
-          ${dragging ? "bg-indigo-100" : "bg-slate-100/80"}
+          ${dragging ? "bg-zinc-100" : "bg-slate-100/80"}
         `}>
-          <svg className={`w-7 h-7 transition-colors ${dragging ? "text-indigo-500" : "text-slate-400"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <svg className={`w-7 h-7 transition-colors ${dragging ? "text-zinc-600" : "text-slate-400"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
           </svg>
         </div>
@@ -96,7 +96,7 @@ export default function UploadZone({ onUploadComplete }: UploadZoneProps) {
         {uploading ? (
           <div className="space-y-2">
             <div className="w-48 h-1.5 bg-slate-200/60 rounded-full overflow-hidden">
-              <div className="h-full bg-indigo-400 rounded-full animate-pulse w-3/4" />
+              <div className="h-full bg-zinc-600 rounded-full animate-pulse w-3/4" />
             </div>
             <p className="text-sm text-slate-500 font-medium">{progress}</p>
           </div>

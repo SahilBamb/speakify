@@ -13,7 +13,7 @@ export default function LandingPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-theme-primary tracking-tight leading-[1.15]">
             Turn anything into
             <br />
-            <span className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="text-zinc-900">
               audio you can feel
             </span>
           </h1>
@@ -25,7 +25,7 @@ export default function LandingPage() {
           <div className="flex items-center justify-center gap-3 pt-2">
             <Link
               href="/dashboard"
-              className="px-6 py-2.5 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 text-white text-sm font-medium shadow-sm shadow-indigo-200/40 hover:shadow-md hover:shadow-indigo-200/50 hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="px-6 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white text-sm font-medium shadow-sm shadow-zinc-200/50 hover:scale-[1.02] active:scale-[0.98] transition-all"
             >
               Get Started
             </Link>
@@ -97,7 +97,7 @@ export default function LandingPage() {
           </p>
           <Link
             href="/dashboard"
-            className="inline-block px-8 py-3 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 text-white text-sm font-medium shadow-sm shadow-indigo-200/40 hover:shadow-md hover:shadow-indigo-200/50 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="inline-block px-8 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white text-sm font-medium shadow-sm shadow-zinc-200/50 hover:scale-[1.02] active:scale-[0.98] transition-all"
           >
             Launch Speakify
           </Link>
@@ -129,7 +129,7 @@ function StepCard({ number, title, description }: { number: string; title: strin
   return (
     <div className="text-center space-y-2">
       <div className="w-8 h-8 rounded-lg glass-strong flex items-center justify-center mx-auto">
-        <span className="text-xs font-bold bg-gradient-to-br from-indigo-500 to-purple-500 bg-clip-text text-transparent">{number}</span>
+        <span className="text-xs font-bold text-zinc-900">{number}</span>
       </div>
       <h3 className="text-sm font-semibold text-theme-primary">{title}</h3>
       <p className="text-xs text-theme-muted leading-relaxed">{description}</p>

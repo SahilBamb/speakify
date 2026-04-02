@@ -5,7 +5,6 @@ import { useParams, useRouter } from "next/navigation";
 import TextReader from "@/components/TextReader";
 import PlaybackBar from "@/components/PlaybackBar";
 import ErrorBoundary from "@/components/ErrorBoundary";
-import ThemeToggle from "@/components/ThemeToggle";
 import TocSidebar from "@/components/TocSidebar";
 import ReadingPrefsPanel from "@/components/ReadingPrefsPanel";
 import { ReaderSkeleton, ChapterSkeleton } from "@/components/Skeleton";
@@ -187,7 +186,7 @@ function BookReaderPageInner() {
           <p className="text-slate-600">{error || "Book not found"}</p>
           <button
             onClick={() => router.push("/")}
-            className="text-sm font-medium text-indigo-500 hover:text-indigo-600 transition-colors"
+            className="text-sm font-medium text-zinc-900 hover:text-zinc-700 transition-colors"
           >
             Back to home
           </button>
@@ -230,7 +229,6 @@ function BookReaderPageInner() {
                 onClick: () => goToChapter(ch.number),
               }))}
             />
-            <ThemeToggle />
             <button
               onClick={() => setPrefsOpen(!prefsOpen)}
               className="p-2 rounded-xl text-theme-muted hover:text-theme-primary hover:bg-theme-hover transition-all"
@@ -258,7 +256,7 @@ function BookReaderPageInner() {
               value={currentChapter}
               onChange={(e) => goToChapter(Number(e.target.value))}
               disabled={chapterLoading}
-              className="text-xs font-medium bg-theme-input border border-theme-input rounded-lg px-2 py-1.5 text-theme-secondary focus:outline-none focus:ring-1 focus:ring-indigo-300 cursor-pointer"
+              className="text-xs font-medium bg-theme-input border border-theme-input rounded-lg px-2 py-1.5 text-theme-secondary focus:outline-none focus:ring-1 focus:ring-zinc-300 cursor-pointer"
             >
               {book.chapters.map((ch) => (
                 <option key={ch.number} value={ch.number}>

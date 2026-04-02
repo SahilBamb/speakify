@@ -18,7 +18,7 @@ const TOC = [
   { id: "playback", label: "Playback Controls" },
   { id: "highlighting", label: "Real-Time Highlighting" },
   { id: "tts", label: "Text-to-Speech (Piper TTS)" },
-  { id: "themes", label: "Themes & Dark Mode" },
+  { id: "themes", label: "Visual Design" },
   { id: "reading-prefs", label: "Reading Preferences" },
   { id: "navigation", label: "Navigation & TOC" },
   { id: "keyboard", label: "Keyboard Shortcuts" },
@@ -81,7 +81,7 @@ export default function DocsPage() {
               </ol>
               <p>
                 Both modes feature natural text-to-speech via <strong>Piper TTS</strong> (fully offline),
-                real-time highlighting, progress saving, dark mode, and keyboard shortcuts.
+                real-time highlighting, progress saving, and keyboard shortcuts.
               </p>
             </DocSection>
 
@@ -228,15 +228,15 @@ export default function DocsPage() {
               </ul>
             </DocSection>
 
-            <DocSection id="themes" title="Themes & Dark Mode">
+            <DocSection id="themes" title="Visual Design">
               <ul>
-                <li><strong>Light</strong> — Pastel gradient + white frosted glass.</li>
-                <li><strong>Dark</strong> — Deep gradient + dark frosted glass.</li>
-                <li><strong>System</strong> — Auto-matches your OS preference.</li>
+                <li><strong>White &amp; Silver palette</strong> — Clean, minimal frosted glass aesthetic.</li>
+                <li><strong>Charcoal accents</strong> — High-contrast buttons and key UI elements.</li>
+                <li><strong>Glassmorphism</strong> — Subtle transparency and blur for depth without clutter.</li>
               </ul>
               <p>
-                Managed via <code>ThemeProvider</code> context. Colors are CSS custom properties that swap between modes.
-                Persists in <code>localStorage</code>.
+                Colors are defined as CSS custom properties. The design uses a monochrome zinc/neutral scale
+                for a premium, content-first experience.
               </p>
             </DocSection>
 
@@ -367,7 +367,7 @@ function DocSection({ id, title, children }: { id: string; title: string; childr
 
 function InfoBox({ children }: { children: React.ReactNode }) {
   return (
-    <div className="glass rounded-lg px-4 py-3 text-xs text-theme-secondary border-l-3 border-indigo-400/50">
+    <div className="glass rounded-lg px-4 py-3 text-xs text-theme-secondary border-l-3 border-zinc-300/50">
       {children}
     </div>
   );
@@ -393,7 +393,7 @@ function ApiEndpoint({ method, path, description }: { method: string; path: stri
   const methodColor = method === "GET"
     ? "text-emerald-600 bg-emerald-50/80"
     : method === "POST"
-    ? "text-indigo-600 bg-indigo-50/80"
+    ? "text-zinc-700 bg-zinc-100"
     : "text-rose-600 bg-rose-50/80";
   return (
     <div className="flex items-start gap-2.5 py-1.5">

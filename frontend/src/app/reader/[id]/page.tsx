@@ -5,7 +5,6 @@ import { useParams, useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import PlaybackBar from "@/components/PlaybackBar";
 import ErrorBoundary from "@/components/ErrorBoundary";
-import ThemeToggle from "@/components/ThemeToggle";
 import TocSidebar from "@/components/TocSidebar";
 import { ReaderSkeleton } from "@/components/Skeleton";
 import { usePlayback } from "@/hooks/usePlayback";
@@ -107,7 +106,7 @@ function ReaderPageInner() {
           <p className="text-slate-600">{error || "Document not found"}</p>
           <button
             onClick={() => router.push("/")}
-            className="text-sm font-medium text-indigo-500 hover:text-indigo-600 transition-colors"
+            className="text-sm font-medium text-zinc-900 hover:text-zinc-700 transition-colors"
           >
             Back to home
           </button>
@@ -151,7 +150,6 @@ function ReaderPageInner() {
                 },
               }))}
             />
-            <ThemeToggle />
           </div>
         </div>
       </header>

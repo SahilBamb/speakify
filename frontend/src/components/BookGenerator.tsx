@@ -46,12 +46,12 @@ export default function BookGenerator({ onGenerated }: BookGeneratorProps) {
             onChange={(e) => setTopic(e.target.value)}
             placeholder="e.g. &quot;Introduction to Quantum Physics&quot; or &quot;A mystery novel set in 1920s Paris&quot;"
             disabled={generating}
-            className="flex-1 px-4 py-3 rounded-xl bg-theme-input border border-theme-input text-sm text-theme-primary placeholder:text-theme-muted focus:outline-none focus:ring-2 focus:ring-indigo-300/50 focus:border-indigo-300 transition-all disabled:opacity-50"
+            className="flex-1 px-4 py-3 rounded-xl bg-theme-input border border-theme-input text-sm text-theme-primary placeholder:text-theme-muted focus:outline-none focus:ring-2 focus:ring-zinc-300/50 focus:border-zinc-300 transition-all disabled:opacity-50"
           />
           <button
             type="submit"
             disabled={generating || !topic.trim()}
-            className="px-6 py-3 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 text-white text-sm font-medium shadow-md shadow-indigo-200/50 hover:shadow-lg hover:shadow-indigo-300/50 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-40 disabled:hover:scale-100 whitespace-nowrap"
+            className="px-6 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white text-sm font-medium shadow-md shadow-zinc-200/50 hover:shadow-lg hover:shadow-zinc-300/50 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-40 disabled:hover:scale-100 whitespace-nowrap"
           >
             {generating ? (
               <span className="flex items-center gap-2">
